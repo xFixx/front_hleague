@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+  }
+}
+.css-MuiSvgIcon-root,
+.MuiSvgIcon-root {
+  color: #fff !important;
+}
+.CircularProgressbar-text {
+  font-family: 'DIN Pro', sans-serif, sans-serif;
+  font-weight: 900;
+}
+
+.MuiAccordion-root {
+  background: none !important;
+}
+
+.MuiMobileStepper-dot {
+  background-color: grey !important;
+  width: 20px !important;
+  height: 8px !important;
+  border-radius: 2px !important;
+}
+.MuiMobileStepper-dotActive {
+  background-color: white !important;
+  width: 20px !important;
+  height: 8px !important;
+  border-radius: 2px !important;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1a191f inset !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.MuiCalendarPicker-root button svg {
+  fill: gray;
+}
+
+.stuff_roleImg__-CjXE2 {
+  @media screen and (max-width: 997px) {
+    width: 14rem !important;
+  }
+}
