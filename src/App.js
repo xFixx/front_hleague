@@ -34,17 +34,17 @@ function App() {
     <StylesProvider>
       <Router history={history}>
         <Switch>
-          <RouteGuard exact path="/" component={MainPage} />
-          <RouteGuard exact path="/profile" component={Profile} />
-          <RouteGuard exact path="/events" component={Events} />
-          <RouteGuard exact path="/training" component={Training} />
-          <RouteGuard exact path="/help" component={Help} />
-          <RouteGuard exact path="/courses" component={Courses} />
-          <RouteGuard exact path="/tests/:id" component={Tests} />
+          <RouteGuard path="/" component={MainPage} exact />
+          <RouteGuard path="/profile" component={Profile} exact />
+          <RouteGuard path="/events" component={Events} exact />
+          <RouteGuard path="/training" component={Training} exact />
+          <RouteGuard path="/help" component={Help} exact />
+          <RouteGuard path="/courses" component={Courses} exact />
+          <RouteGuard path="/tests/:id" component={Tests} exact />
 
           <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/register" component={RegisterPage} />
-          <Route exact path="/login" component={Login} />
+          <Route path="/login" component={Login} />
           <Route exact path="/password-reset" component={ResetPage} />
           <Route exact path="/complete" component={CompletePage} />
           <Route path="/auth/activate">
