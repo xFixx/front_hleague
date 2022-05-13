@@ -47,7 +47,7 @@ const StudyAccord = () => {
                   return (
                     <div className={cls.details} key={id}>
                       <div
-                        className={cls.detailImg}
+                        className="{cls.detailImg} _learn{id}" 
                         style={{
                           background: `linear-gradient(269.65deg, #F77676 -18.16%, rgba(210, 53, 53, 0) 100%)'`,
                         }}
@@ -56,7 +56,7 @@ const StudyAccord = () => {
                       </div>
                       <div className={cls.detailInfo}>
                         <div className={cls.days}>
-                          <h3>СТАЛОСЬ КОЛИЧЕСТВО ДНЕЙ</h3>
+                          <h3>СТАЛОСЬ ДНЕЙ</h3>
                           <p>{15}</p>
                         </div>
                         <div className={cls.detailLine} />
