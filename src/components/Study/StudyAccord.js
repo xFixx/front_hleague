@@ -47,7 +47,7 @@ const StudyAccord = () => {
                   return (
                     <div className={cls.details} key={id}>
                       <div
-                        className={cls.detailImg}
+                        className="{cls.detailImg} _learn{id}" 
                         style={{
                           background: `linear-gradient(269.65deg, #F77676 -18.16%, rgba(210, 53, 53, 0) 100%)'`,
                         }}
