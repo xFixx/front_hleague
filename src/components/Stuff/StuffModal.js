@@ -7,7 +7,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import JudjeImage from '../../img/sudya.png'
 import InstructorImage from '../../img/instruktor.png'
 import TrainerImage from '../../img/trener.png'
-import VolunteerImage from '../../static/img/heroPhotoPng.png'
+import VolunteerImage from '../../img/volunteer.png'
 
 const judge = {
   id: 1,

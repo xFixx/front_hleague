@@ -1,12 +1,12 @@
-import stuffAva from '../../static/img/heroPhotoPng.png'
-import mask from '../../img/Mask-4.jpg'
 import styles from './stuff.module.scss'
 import sudya from '../../img/sudya.png'
 import inst from '../../img/instruktor.png'
 import trener from '../../img/trener.png'
+import volunteer from '../../img/volunteer.png'
 import mask1 from '../../img/Mask-1.jpg'
 import mask2 from '../../img/Mask-2.jpg'
 import mask3 from '../../img/Mask-3.jpg'
+import mask4 from '../../img/Mask-4.jpg'
 import { useMediaQuery } from '@mui/material'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -64,8 +64,8 @@ const stuffs = [
     idName: 'volunteer',
     title: 'ВОЛОНТЕР',
     description: 'Поддержка, доброжелательность, ответственнность',
-    stuffAva: stuffAva,
-    mask: mask,
+    stuffAva: volunteer,
+    mask: mask4,
     color: '#FEEC4F',
     skills: [
       'Открыт к общению и всегда готов помочь',
