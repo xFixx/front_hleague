@@ -38,7 +38,7 @@ const StudyAccord = () => {
               <Typography className={cls.top} component={'div'}>
                 <h2>{title}</h2>
                 <div className={cls.line} />
-                <p>Курсы + тесты</p>
+                <p>Курсы и тесты</p>
               </Typography>
             </AccordionSummary>
             <AccordionDetails className={cls.accordDetail}>
