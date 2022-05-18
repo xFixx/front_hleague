@@ -1,17 +1,14 @@
-import React from 'react';
+import React from 'react'
 import Button from './index'
 
 export default {
-    title: 'Design System/Atoms/Button',
-    component: Button,
-    parameters: {
-        backgrounds: {
-            default: 'grey',
-            values: [
-                { name: 'grey', value: 'grey' }
-            ]
-        }
-    }
-};
+  title: 'Design System/Atoms/Button',
+  component: Button,
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
+  },
+}
 
-export const SecondaryButton = () => <Button>Button</Button>
+export const Secondary = () => <Button>Button</Button>
