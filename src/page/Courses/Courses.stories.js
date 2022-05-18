@@ -1,12 +1,12 @@
 import React from 'react'
-import Component from './index'
+import Component from './Courses'
 import { Provider } from 'react-redux'
 import { store } from '../../Redux/store'
 import { Router } from 'react-router-dom'
 import { history } from '../../helpers/history'
 
 export default {
-  title: 'Design System/Templates',
+  title: 'Design System/Pages',
   component: Component,
   decorators: [
     (story) => <Provider store={store}>{story()}</Provider>,
@@ -19,4 +19,4 @@ export default {
   },
 }
 
-export const Welcome = () => <Component />
+export const Courses = () => <Component />

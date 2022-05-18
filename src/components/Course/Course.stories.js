@@ -4,7 +4,7 @@ import { Router } from 'react-router-dom'
 import { history } from '../../helpers/history'
 
 export default {
-  title: 'Design System/Pages',
+  title: 'Design System/Templates',
   component: Component,
   decorators: [
     (story) => <Router history={history}>{story()}</Router>,
