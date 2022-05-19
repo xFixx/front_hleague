@@ -5,9 +5,10 @@ import AccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import cls from './study.module.scss'
-import kurs from '../../img/kurs.svg'
 import { Link } from 'react-router-dom'
 import { $api } from '../../services/api'
+import { getCourseBackgroundImage } from '../../helpers'
+import { EXAMS_ORDER } from '../../constants'
 
 const getCategories = async () => {
   try {
@@ -38,30 +39,29 @@ const StudyAccord = () => {
               <Typography className={cls.top} component={'div'}>
                 <h2>{title}</h2>
                 <div className={cls.line} />
-                <p>Курсы и тесты</p>
+                <p>Курсы + тесты</p>
               </Typography>
             </AccordionSummary>
             <AccordionDetails className={cls.accordDetail}>
               <div className={cls.bottom}>
-                {exams.map(({ id, title }) => {
+                {EXAMS_ORDER.map((examId) =>
+                  exams.find(({ id }) => id === examId)
+                ).map(({ id, title }) => {
                   return (
                     <div className={cls.details} key={id}>
-                      <div
-                        className="{cls.detailImg} _learn{id}" 
-                        style={{
-                          background: `linear-gradient(269.65deg, #F77676 -18.16%, rgba(210, 53, 53, 0) 100%)'`,
-                        }}
-                      >
+                      <div className={cls.detailImg}>
+                        <img src={getCourseBackgroundImage(id)} alt="" />
                         <p>{title}</p>
                       </div>
                       <div className={cls.detailInfo}>
                         <div className={cls.days}>
-                          <h3>СТАЛОСЬ ДНЕЙ</h3>
-                          <p>{15}</p>
+                          <h3>{title}</h3>
                         </div>
                         <div className={cls.detailLine} />
                         <div className={cls.btns}>
-                          <button className={cls.btn1}>Пройти курс</button>
+                          <Link to={'/courses'}>
+                            <button className={cls.btn1}>Пройти курс</button>
+                          </Link>
                           <Link to={`/tests/${id}`}>
                             <button className={cls.btn2}>Пройти тест</button>
                           </Link>
