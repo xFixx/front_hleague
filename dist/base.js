@@ -17,7 +17,7 @@ exports.RequiredError = exports.BaseAPI = exports.COLLECTION_FORMATS = exports.B
 // Some imports not used depending on template conditions
 // @ts-ignore
 const axios_1 = require("axios");
-exports.BASE_PATH = "http://relaxout.ru/api/v1".replace(/\/+$/, "");
+exports.BASE_PATH = "https://relaxout.ru/api/v1".replace(/\/+$/, "");
 /**
  *
  * @export
