@@ -48,6 +48,7 @@ const Learn = () => {
               styles={{
                 root: {
                   color: 'black',
+                  fontStretch: 'condensed',
                 },
               }}
             />
@@ -71,6 +72,7 @@ const Learn = () => {
               styles={{
                 root: {
                   color: 'black',
+                  fontStretch: 'condensed',
                 },
               }}
             />
