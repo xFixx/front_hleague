@@ -28,6 +28,7 @@
         color: #ffffff;
         font-family: 'DIN Pro', sans-serif;
         text-transform: uppercase;
+        font-stretch: condensed;
       }
 
       .line {
@@ -69,6 +70,7 @@
           p {
             position: absolute;
             font-family: 'DIN Pro', sans-serif;
+            font-stretch: condensed;
             font-style: normal;
             font-weight: 900;
             color: #ffffff;
@@ -127,6 +129,7 @@
               font-style: normal;
               font-weight: 500;
               color: #ffffff;
+              width: 100%;
             }
 
             .btn1 {
@@ -316,6 +319,7 @@
                 .btn2 {
                   font-size: 12px;
                   line-height: 15px;
+                  width: 100%;
                 }
               }
             }
@@ -405,6 +409,7 @@
                 .btn2 {
                   font-size: 12px;
                   line-height: 15px;
+                  width: 100%;
                 }
               }
             }

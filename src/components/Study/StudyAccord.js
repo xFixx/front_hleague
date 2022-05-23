@@ -21,10 +21,11 @@ const getCategories = async () => {
 
 const StudyAccord = () => {
   const [categories, setCategories] = useState([])
-  console.log(categories)
+
   useEffect(async () => {
     getCategories().then((res) => setCategories(res))
   }, [])
+
   return (
     <div className={cls.StudyAccord}>
       {categories.map(({ title, exams }) => {
