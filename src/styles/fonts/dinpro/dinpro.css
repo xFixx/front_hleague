@@ -57,3 +57,19 @@
   font-style: normal;
   font-stretch: condensed;
 }
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('dinpro_condensedblack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('dinpro_condensedmedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: condensed;
+}
