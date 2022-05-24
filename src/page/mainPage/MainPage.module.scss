@@ -34,12 +34,16 @@
       background-size: cover;
       box-sizing: border-box;
       grid-gap: 30px;
-      padding: 30px;
+      padding: 110px;
       display: flex;
+      @media(max-width:1200px){
+        padding: 30px;
+      }
       @media(max-width:960px){
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 26px;
       }
       .cardImg{
         background: none;
@@ -73,9 +77,10 @@
           letter-spacing: 0.01em;
           color: #ffffff;
           font-family: 'DIN Pro', sans-serif;
+          font-stretch: condensed;
           font-style: normal;
-          font-weight: bold;
-          font-size: 4vw;
+          font-weight: 900;
+          font-size: 64px;
 
           @media (max-width: 758px) {
             font-size: 32px;
