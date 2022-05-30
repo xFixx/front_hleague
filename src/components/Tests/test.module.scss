@@ -20,6 +20,7 @@
     font-style: normal;
     font-family: 'DIN Pro', sans-serif;
     font-weight: 900;
+    font-stretch: condensed;
     color: #ffffff;
     @media (min-width: 1200px) {
       font-size: 36px;
@@ -38,11 +39,11 @@
     }
   }
   .pageDesc {
-    font-family: 'Gilroy-semibold', sans-serif;
+    font-family: 'Gilroy-regular', sans-serif;
     font-style: normal;
     font-weight: bold;
-    background: linear-gradient(267.53deg, #ed1c24 -0.27%, #8820b9 100%),
-      linear-gradient(0deg, #ffffff, #ffffff);
+    text-transform: uppercase;
+    background: linear-gradient(267.53deg, #ed1c24 -0.27%, #8820b9 100%), #ffffff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @media (min-width: 1200px) {
@@ -97,7 +98,7 @@
   }
 
   .count {
-    font-family: 'Gilroy-semibold', sans-serif;
+    font-family: 'Gilroy-regular', sans-serif;
     font-style: normal;
     font-weight: bold;
     color: #ffffff;
@@ -114,6 +115,7 @@
     font-style: normal;
     font-family: 'DIN Pro', sans-serif;
     font-weight: bold;
+    font-stretch: condensed;
     color: #ffffff;
     align-items: center;
     margin: 0;
@@ -134,6 +136,7 @@
   .attention {
     font-family: 'DIN Pro', sans-serif;
     font-style: normal;
+    font-stretch: condensed;
     font-weight: 500;
     color: #b5b5b5;
     margin: 0;

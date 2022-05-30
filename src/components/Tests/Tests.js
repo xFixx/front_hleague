@@ -6,11 +6,6 @@ import RadioGroup from '@mui/material/RadioGroup'
 import { Checkbox } from '@mui/material'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import FormControl from '@mui/material/FormControl'
-import first from '../../img/1.jpg'
-import second from '../../img/2.jpg'
-import third from '../../img/3.jpg'
-import fourth from '../../img/4.jpg'
-import fifth from '../../img/5.jpg'
 import * as Yup from 'yup'
 import { $api } from '../../services/api'
 import { useParams } from 'react-router-dom'
@@ -55,8 +50,6 @@ const Tests = () => {
         }, {})
       )
     : null
-
-  console.log({ data, initialValues })
 
   return (
     <div className={cls.Test}>
@@ -120,7 +113,9 @@ const Tests = () => {
                         )}
                         <div className={cls.testQues}>
                           <div>
-                            <h2 className={cls.count}>{++index}</h2>
+                            <h2 className={cls.count}>
+                              {index < 9 ? `0${index + 1}` : index + 1}
+                            </h2>
                             <div className={cls.line} />
                             <p className={cls.question}>
                               {title + '⠀'}
@@ -186,28 +181,3 @@ const Tests = () => {
 }
 
 export default Tests
-
-const tests = [
-  {
-    id: 'test_1',
-    type: 'radio',
-    label: 'Кто такой волонтер?',
-    helpText: ' (выберите 1 вариант ответа)',
-    img: first,
-    count: '01',
-    answers: [
-      {
-        id: 'test_1_question_1',
-        answer: 'Движущая сила любого мероприятия, часть одной большой команды',
-      },
-      {
-        id: 'test_1_question_2',
-        answer: 'Движущая сила только одного мероприятия за весь сезон',
-      },
-      {
-        id: 'test_1_question_3',
-        answer: 'Отдельная движущая сила мероприятия, не часть команды',
-      },
-    ],
-  },
-]
