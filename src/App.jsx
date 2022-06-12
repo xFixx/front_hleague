@@ -18,6 +18,7 @@ import ActivatePage from 'page/AuthPages/ActivatePage'
 import CompletePage from 'page/AuthPages/CompletePage'
 import { PageVolunteers } from 'page/volunteers';
 import { PageInstructorPrivileges } from 'page/instructor-privileges';
+import { PageInstructors } from 'page/instructors';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles/global.scss';
@@ -55,8 +56,9 @@ function App() {
             <ActivatePage />
           </Route>
 
-          <RouteGuard exact path="/volunteers" component={PageVolunteers} />
-          <RouteGuard exact path="/instructor-privileges" component={PageInstructorPrivileges} />
+          <RouteGuard path="/volunteers" component={PageVolunteers} exact />
+          <RouteGuard path="/instructor-privileges" component={PageInstructorPrivileges} exact />
+          <RouteGuard path="/instructors" component={PageInstructors} exact />
         </Switch>
       </Router>
     </StylesProvider>
