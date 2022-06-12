@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import MainLayout from '../../components/MainLayout/MainLayout'
 import { useMediaQuery } from '@mui/material'
 import cl from './profile.module.scss'
@@ -7,7 +7,7 @@ import fotka from '../../img/lolll.png'
 import Learn from '../../components/Learn/Learn'
 import { useDispatch, useSelector } from 'react-redux'
 import { BACK_PIC_URL } from '../../utils/constants'
-import { editAvatar, getUser } from '../../Redux/reducers/userReducer'
+import { getUser } from '../../Redux/reducers/userReducer'
 import { $api } from '../../services/api'
 import ProfileInfo from '../../components/Profile/profileInfo'
 import ProfileEdit from '../../components/Profile/profileEdit'
@@ -24,7 +24,6 @@ const submit = async (values, id) => {
 const Profile = () => {
   const isTabletMin = useMediaQuery('(min-width:768px)')
   const isTabletMax = useMediaQuery('(max-width:1200px)')
-  const isMobileMax = useMediaQuery('(max-width: 700px)')
 
   const dispatch = useDispatch()
   const [editStatus, setEditStatus] = useState(false)
