@@ -23,6 +23,7 @@ import { PageInstructors } from 'page/instructors';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles/global.scss';
 import './App.css';
+import { MechanicsAndPayments } from 'page/mechanics-and-payments'
 
 // const Context = React.createContext()
 
@@ -59,6 +60,7 @@ function App() {
           <RouteGuard path="/volunteers" component={PageVolunteers} exact />
           <RouteGuard path="/instructor-privileges" component={PageInstructorPrivileges} exact />
           <RouteGuard path="/instructors" component={PageInstructors} exact />
+          <RouteGuard path="/selection-and-payments" component={MechanicsAndPayments} exact />
         </Switch>
       </Router>
     </StylesProvider>
