@@ -6,15 +6,11 @@ import * as Yup from 'yup'
 import PrimaryButton from '../_components/PrimaryButton'
 import SecondaryButton from '../_components/SecondaryButton'
 import { useHistory } from 'react-router-dom'
-import { NavLink } from 'react-router-dom'
 
 import classes from './Login.module.scss'
 import './style.css'
 import { Link } from 'react-router-dom'
 import { $api } from '../../services/api'
-import { Redirect } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { getUser } from '../../Redux/asyncFunc/asyncFunc'
 
 const initialValues = {
   email: '',
@@ -29,10 +25,8 @@ const SignupSchema = Yup.object().shape({
 })
 
 function LoginPage() {
-  const [isAuthed, setIsAuthed] = useState(false)
   const [errorMessage, setErrorMessage] = useState(null)
   const router = useHistory()
-  const dispatch = useDispatch()
   const { values, errors, touched, handleChange, handleSubmit } = useFormik({
     initialValues,
     validationSchema: SignupSchema,

@@ -2,7 +2,6 @@ import React from 'react'
 import cls from './Welcome.module.scss'
 import Title from '../_components/Title'
 import SecondaryButton from '../_components/SecondaryButton'
-import { DOMAIN } from '../../utils/constants'
 import { Link } from 'react-router-dom'
 
 function WelcomePage() {

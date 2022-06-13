@@ -5,7 +5,7 @@ import thanksCap from 'assets/thanks-cap.jpg';
 import paymentData from 'assets/payments-data.jpg';
 import rewardSystem from 'assets/reward-system.jpg';
 
-export const MechanicsAndPayments = () => {
+export const PageMechanicsAndPayments = () => {
   return (
     <MainLayout>
       <main>

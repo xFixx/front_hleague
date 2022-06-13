@@ -12,7 +12,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
-import SecondaryButton from '../_components/SecondaryButton'
 import React from 'react'
 import StuffModal from './StuffModal'
 

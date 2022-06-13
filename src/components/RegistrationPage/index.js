@@ -17,7 +17,6 @@ import FormControl from '@mui/material/FormControl'
 import PrimaryButton from '../_components/PrimaryButton'
 import SecondaryButton from '../_components/SecondaryButton'
 import { Link, useHistory } from 'react-router-dom'
-import AdapterJalali from '@date-io/date-fns-jalali'
 
 import classes from './Registration.module.scss'
 
@@ -25,8 +24,7 @@ import FormGroup from '@mui/material/FormGroup'
 import Checkbox from '@mui/material/Checkbox'
 import './style.css'
 import { $api } from '../../services/api'
-import { NavLink } from 'react-router-dom'
-import { toast, ToastContainer } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 
 import 'react-toastify/dist/ReactToastify.css'
 

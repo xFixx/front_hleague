@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Modal from '@mui/material/Modal'
@@ -14,7 +14,8 @@ const judge = {
   img: JudjeImage,
   mainColor: '#E83838',
   title: 'Судья',
-  desc: 'Это гарант объективных результатов\n' + 'спортивного мероприятия.',
+  desc: `Это гарант объективных результатов
+  спортивного мероприятия.`,
   tasks: [
     'Контроль соблюдения и оценка техники прохождения препятствий',
     'Контроль соблюдения регламента соревнований',

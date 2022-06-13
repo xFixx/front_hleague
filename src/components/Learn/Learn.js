@@ -3,8 +3,6 @@ import cl from './learn.module.scss'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 import { $api } from '../../services/api'
-import SecondaryButton from '../_components/SecondaryButton'
-import { Link } from 'react-router-dom'
 
 const getExams = async () => {
   try {
