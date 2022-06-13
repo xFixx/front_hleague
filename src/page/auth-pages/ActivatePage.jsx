@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { $api } from '../../services/api'
 
-const activate = async (router) => {
+export const activate = async (router) => {
   const x = new URLSearchParams(window.location.search)
   try {
     let obj = {}
@@ -16,7 +16,7 @@ const activate = async (router) => {
   }
 }
 
-const Activate = () => {
+export const ActivatePage = () => {
   const router = useHistory()
 
   useEffect(() => {
@@ -25,5 +25,3 @@ const Activate = () => {
 
   return null;
 }
-
-export default Activate

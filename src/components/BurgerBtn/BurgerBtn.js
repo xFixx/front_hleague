@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import cls from './burger.module.scss'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
+
 import Hamburger from 'hamburger-react'
 import home from '../../img/home.svg'
 import shop from '../../img/shop.svg'
@@ -8,19 +9,20 @@ import timer from '../../img/timer.svg'
 import help from '../../img/help.svg'
 import exit from '../../img/exit.svg'
 import { motion } from 'framer-motion'
-import { NavLink } from 'react-router-dom'
 import account from '../../img/account.png'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { BACK_PIC_URL } from '../../utils/constants'
 
 
+import cls from './burger.module.scss';
+
 const Navs = [
-  { id: 1, text: 'Главная', img: home, link: '/' },
-  { id: 2, text: 'Личный кабинет', img: shop, link: '/profile' },
-  { id: 3, text: 'Мероприятия', img: ticket, link: '/events' },
-  { id: 4, text: 'Моё обучение', img: timer, link: '/training' },
-  { id: 5, text: 'Помощь', img: help, link: '/help' },
+  { id: 1, text: 'Главная',         img: home,    link: '/' },
+  { id: 2, text: 'Личный кабинет',  img: shop,    link: '/profile' },
+  { id: 3, text: 'Мероприятия',     img: ticket,  link: '/events' },
+  { id: 4, text: 'Моё обучение',    img: timer,   link: '/training' },
+  { id: 5, text: 'Помощь',          img: help,    link: '/help' },
 ]
 
 const BurgerBtn = () => {
