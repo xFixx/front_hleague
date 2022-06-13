@@ -1,5 +1,5 @@
-import { Router, Route, Switch } from 'react-router-dom'
 import React from 'react'
+import { Router, Route, Switch } from 'react-router-dom'
 import Events from './page/events/Events'
 import Help from './page/help/Help'
 import Profile from './page/profile/Profile'
@@ -16,14 +16,17 @@ import { history } from 'helpers/history'
 import RouteGuard from 'components/RouteGuard'
 import ActivatePage from 'page/AuthPages/ActivatePage'
 import CompletePage from 'page/AuthPages/CompletePage'
-import { PageVolunteers } from 'page/volunteers';
-import { PageInstructorPrivileges } from 'page/instructor-privileges';
-import { PageInstructors } from 'page/instructors';
+import {
+  PageVolunteers,
+  PageInstructorPrivileges,
+  PageInstructors,
+  PageMechanicsAndPayments,
+  PageAssignmentAndStandarts,
+} from 'page';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles/global.scss';
 import './App.css';
-import { MechanicsAndPayments } from 'page/mechanics-and-payments'
 
 // const Context = React.createContext()
 
@@ -60,7 +63,8 @@ function App() {
           <RouteGuard path="/volunteers" component={PageVolunteers} exact />
           <RouteGuard path="/instructor-privileges" component={PageInstructorPrivileges} exact />
           <RouteGuard path="/instructors" component={PageInstructors} exact />
-          <RouteGuard path="/selection-and-payments" component={MechanicsAndPayments} exact />
+          <RouteGuard path="/selection-and-payments" component={PageMechanicsAndPayments} exact />
+          <RouteGuard path="/assignment-and-standarts" component={PageAssignmentAndStandarts} exact />
         </Switch>
       </Router>
     </StylesProvider>

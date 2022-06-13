@@ -2,10 +2,8 @@ import React from 'react'
 import cl from '../../page/profile/profile.module.scss'
 import { useMediaQuery } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
-import { useFormik } from 'formik'
 import Input from '../_components/Input'
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
-import classes from '../RegistrationPage/Registration.module.scss'
 import DatePicker from '@mui/lab/DatePicker'
 import TextField from '@mui/material/TextField'
 import LocalizationProvider from '@mui/lab/LocalizationProvider'
@@ -19,20 +17,14 @@ const formatDate = (value, setFieldValue) => {
 }
 
 const ProfileEdit = ({
-  setEditStatus,
   editStatus,
   values,
-  errors,
-  touched,
   handleChange,
-  handleSubmit,
   setFieldValue,
 }) => {
   const isTabletMin = useMediaQuery('(min-width:768px)')
   const isTabletMax = useMediaQuery('(max-width:1200px)')
-  const isMobileMax = useMediaQuery('(max-width: 700px)')
 
-  const dispatch = useDispatch()
   const { user } = useSelector((state) => state.user)
 
   return (

@@ -3,7 +3,6 @@ import {
   tokenGetAccess,
   tokenGetAccessSession,
   tokenRefreshItems,
-  tokenRemoveItems,
 } from './token'
 import { BASE_API_URL } from '../utils/constants'
 
