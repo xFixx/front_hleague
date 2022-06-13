@@ -1,21 +1,17 @@
-import React from 'react'
-import { Router, Route, Switch } from 'react-router-dom'
-import Events from './page/events/Events'
-import Help from './page/help/Help'
-import Profile from './page/profile/Profile'
-import Training from './page/training/Training'
-import MainPage from './page/mainPage/MainPage'
-import Courses from './page/Courses/Courses'
-import Login from './page/AuthPages/LoginPage'
-import ResetPage from './page/AuthPages/PasswordResetPage'
-import RegisterPage from './page/AuthPages/RegisterPage'
-import Welcome from './page/AuthPages/Welcome'
-import Tests from './page/tests/Test'
-import { StylesProvider } from '@mui/styles'
-import { history } from 'helpers/history'
-import RouteGuard from 'components/RouteGuard'
-import ActivatePage from 'page/AuthPages/ActivatePage'
-import CompletePage from 'page/AuthPages/CompletePage'
+import React from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
+
+import Events from 'page/events/Events';
+import Help from 'page/help/Help';
+import Profile from 'page/profile/Profile';
+import { Login, ResetPage, ActivatePage, CompletePage, Welcome, RegisterPage } from 'page';
+import Training from 'page/training/Training';
+import MainPage from 'page/mainPage/MainPage';
+import Courses from 'page/Courses/Courses';
+import Tests from 'page/tests/Test';
+import { StylesProvider } from '@mui/styles';
+import { history } from 'helpers/history';
+import RouteGuard from 'components/RouteGuard';
 import {
   PageVolunteers,
   PageInstructorPrivileges,

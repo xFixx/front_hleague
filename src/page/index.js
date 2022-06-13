@@ -1,4 +1,4 @@
-export * from './AuthPages';
+export * from './auth-pages';
 export * from './Courses';
 export * from './assignment-and-standarts';
 export * from './events';
