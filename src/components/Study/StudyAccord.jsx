@@ -19,11 +19,22 @@ const getCategories = async () => {
   }
 }
 
+const EXAMS_LINKS = {
+  1: '/instructor-privileges',
+  2: '/assignment-and-standarts',
+  3: '/instructors',
+  4: '/volunteers',
+  8: '/selection-and-payments',
+}
+
 const StudyAccord = () => {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    getCategories().then((res) => setCategories(res))
+    getCategories().then((res) => {
+      debugger;
+      setCategories(res);
+    });
   }, [])
 
   return (
@@ -60,7 +71,7 @@ const StudyAccord = () => {
                         </div>
                         <div className={cls.detailLine} />
                         <div className={cls.btns}>
-                          <Link to={'/courses'}>
+                          <Link to={EXAMS_LINKS[id]}>
                             <button className={cls.btn1}>Пройти курс</button>
                           </Link>
                           <Link to={`/tests/${id}`}>

@@ -26,7 +26,7 @@ export const PageVolunteers = () => {
             <div className="col-sm-6">
               <h3 className='header-block'>кто такой волонтер?</h3>
               <p>Волонтер -  это движущая сила любого мероприятия, часть одной большой команды.</p>
-              <Link className='button'>Стать волонтером</Link>
+              <Link className='button' to='#'>Стать волонтером</Link>
             </div>
 
             <div className="col-sm-6">
