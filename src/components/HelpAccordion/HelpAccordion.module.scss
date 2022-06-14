@@ -16,6 +16,8 @@
       }
       .title {
         font-family: 'DIN Pro', sans-serif;
+        font-stretch: condensed;
+        font-weight: 900;
         font-size: 36px;
         @media (max-width: 530px) {
           font-size: 24px;

@@ -1,6 +1,26 @@
+:root {
+  --color-background: #1a191f;
+  --color-text: #fff;
+  --color-ul-item: #E46368;
+  --color-bg-gray: #302E3A;
+  --color-underline: #666666;
+  --color-text-faded: rgba(255, 255, 255, 0.5);
+
+  --font-family-main: 'Gilroy-regular', sans-serif;
+
+  --bs-body-color: #fff;
+}
+
 body {
   margin: 0;
   padding: 0;
+
+  background: var(--color-dark);
+  color: var(--color-text);
+  font-family: var(--font-family-main);
+  font-size: 14px;
+  line-height: 20px;
+  
 
   h1,
   h2,
@@ -10,8 +30,43 @@ body {
   h6 {
     margin: 0;
     padding: 0;
+
+    text-transform: uppercase;
   }
 }
+
+a {
+  text-decoration: none;
+  &:visited {
+    color: var(--color-text);
+  }
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: none;
+
+  li {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: var(--color-ul-item);
+      top: 10px;
+      left: -17px;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
 .css-MuiSvgIcon-root,
 .MuiSvgIcon-root {
   color: #fff !important;
@@ -52,5 +107,119 @@ select:-webkit-autofill {
 .stuff_roleImg__-CjXE2 {
   @media screen and (max-width: 997px) {
     width: 14rem !important;
+  }
+}
+
+/**
+ * HEADERS
+ */
+@mixin main-header {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 85px;
+  text-transform: uppercase;
+  background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%), #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.header-page {
+  @include main-header;
+  font-size: 68px;
+}
+
+.header-section {
+  @include main-header;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.header-block {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/**
+ * UI
+ */
+
+.button {
+  display: inline-flex;
+  padding: 9px 34px;
+  background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%), linear-gradient(267.53deg, #982EEB -0.27%, #359AD2 100%), #C7252B;
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+.enum {
+  margin-bottom: 45px;
+
+  &__number {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-underline);
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.table {
+  th {
+    background-color: #2D2D2E;
+  }
+
+  th, td {
+    padding: 10px;  
+  }
+
+  td {
+    border-bottom: none;
+  }
+
+  th:not(:last-child),
+  td:not(:last-child) {
+    border-right: 1px solid #fff;
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--color-bg-gray);
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.3);;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-right: 35px;
+  padding-bottom: 25px;
+  padding-left: 35px;
+  background-color: var(--color-bg-gray);
+  border-radius: 25px;
+  text-align: center;
+
+  &__icon {
+    width: 40px;
+    height: 45px;
+    margin-bottom: 15px;
   }
 }

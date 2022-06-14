@@ -1,0 +1,51 @@
+$padding-side: 8px;
+
+.avatarVolunteer {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  padding-top: 16px;
+  border-radius: 5px;
+  background-color: var(--color-bg-gray);
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    padding-left: $padding-side;
+    padding-right: $padding-side;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.avatarFounder {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+
+  &__img {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  &__name {
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #343243;
+  }
+
+  &__position {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

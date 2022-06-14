@@ -10,7 +10,6 @@ import SecondaryButton from '../_components/SecondaryButton'
 import { $api } from '../../services/api'
 import { toast, ToastContainer } from 'react-toastify'
 import { Link } from 'react-router-dom'
-import classes from '../LoginPage/Login.module.scss'
 
 const initialValues = {
   email: '',

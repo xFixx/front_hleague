@@ -27,6 +27,8 @@
         font-weight: 900;
         color: #ffffff;
         font-family: 'DIN Pro', sans-serif;
+        text-transform: uppercase;
+        font-stretch: condensed;
       }
 
       .line {
@@ -57,13 +59,23 @@
 
         .detailImg {
           border-radius: 10px 10px 0 0;
+          position: relative;
+          overflow: hidden;
+
+          img {
+            mask-image: linear-gradient(269.65deg, #F77676 -18.16%, rgba(210, 53, 53, 0) 100%);
+            width: auto;
+          }
 
           p {
+            position: absolute;
             font-family: 'DIN Pro', sans-serif;
+            font-stretch: condensed;
             font-style: normal;
             font-weight: 900;
             color: #ffffff;
             text-align: center;
+            text-transform: uppercase;
           }
         }
 
@@ -85,6 +97,7 @@
               font-style: normal;
               font-weight: normal;
               color: #ffffff;
+              text-transform: uppercase;
             }
 
             p {
@@ -116,6 +129,7 @@
               font-style: normal;
               font-weight: 500;
               color: #ffffff;
+              width: 100%;
             }
 
             .btn1 {
@@ -130,6 +144,14 @@
                 ),
                 linear-gradient(267.53deg, #982eeb -0.27%, #359ad2 100%),
                 #c7252b;
+            }
+
+            a:first-child {
+              text-align: left;
+            }
+
+            a:last-child {
+              text-align: right;
             }
           }
         }
@@ -170,17 +192,21 @@
       .accordDetail {
         .bottom {
           display: grid;
-          grid-template: 1fr / repeat(4, 1fr);
+          grid-template: 1fr / repeat(5, 1fr);
           align-items: center;
           grid-gap: 24px;
           padding: 50px 20px;
 
           .details {
             .detailImg {
-              height: 253px;
               display: flex;
               justify-content: center;
               align-items: center;
+
+              img {
+                max-width: 100%;
+                height: auto;
+              }
 
               p {
                 font-size: 30px;
@@ -293,6 +319,7 @@
                 .btn2 {
                   font-size: 12px;
                   line-height: 15px;
+                  width: 100%;
                 }
               }
             }
@@ -382,6 +409,7 @@
                 .btn2 {
                   font-size: 12px;
                   line-height: 15px;
+                  width: 100%;
                 }
               }
             }

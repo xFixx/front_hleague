@@ -1,0 +1,66 @@
+.roadmap {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+
+  &__point,
+  &__step {
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--color-bg-gray);
+    text-align: center;
+  }
+
+  &__point {
+    padding: 21px 13px;
+    text-transform: uppercase;
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    padding: 7px 25px;
+  }
+
+  &__num {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 31px;
+    font-weight: 900;
+    line-height: 37px;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../../assets/icon-arrow.svg');
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__arrowDown {
+    bottom: -20px;
+  }
+
+  &__arrowUp {
+    top: -20px;
+    transform: rotate(-90deg);
+  }
+
+  &__start {
+    padding-top: 40px;
+  }
+
+  &__even {
+    padding-top: 120px;
+  }
+
+  &__end {
+    padding-top: 120px;
+  }
+}
