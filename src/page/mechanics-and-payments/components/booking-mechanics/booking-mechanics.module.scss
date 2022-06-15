@@ -1,0 +1,11 @@
+.b {
+  &__title,
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 100%;
+    margin-top: 100px !important;
+  }
+}

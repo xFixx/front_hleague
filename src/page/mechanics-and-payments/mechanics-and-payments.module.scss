@@ -1,0 +1,11 @@
+.b {
+  &__intro,
+  &__bookingMechanics {
+    margin-bottom: 100px;
+  }
+
+  &__paymentData,
+  &__rewardSystem {
+    margin-bottom: 60px;
+  }
+}
