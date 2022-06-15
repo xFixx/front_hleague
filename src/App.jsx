@@ -6,7 +6,7 @@ import Help from 'page/help/Help';
 import Profile from 'page/profile/Profile';
 import { Login, ResetPage, ActivatePage, CompletePage, Welcome, RegisterPage } from 'page';
 import Training from 'page/training/Training';
-import MainPage from 'page/mainPage/MainPage';
+import MainPage from 'page/main/MainPage';
 import Courses from 'page/Courses/Courses';
 import Tests from 'page/tests/Test';
 import { StylesProvider } from '@mui/styles';
