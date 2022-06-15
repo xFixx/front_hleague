@@ -5,7 +5,7 @@ export * from './events';
 export * from './help';
 export * from './instructor-privileges';
 export * from './instructors';
-export * from './mainPage';
+export * from './main';
 export * from './mechanics-and-payments';
 export * from './profile';
 export * from './study';

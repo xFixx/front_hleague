@@ -1,0 +1,21 @@
+.page {
+  &__intro,
+  &__instructorTasks {
+    margin-bottom: 40px;
+  }
+
+  &__projectHistory,
+  &__qualityControlSystem {
+    margin-bottom: 150px;
+  }
+
+  &__carierRoadMap {
+    margin-bottom: 85px;
+  }
+
+  &__mainDocuments,
+  &__formsOfInteraction,
+  &__codeOfHonor {
+    margin-bottom: 65px;
+  }
+}

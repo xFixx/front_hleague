@@ -116,7 +116,6 @@ select:-webkit-autofill {
 @mixin main-header {
   font-style: normal;
   font-weight: 700;
-  line-height: 85px;
   text-transform: uppercase;
   background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%), #FFFFFF;
   -webkit-background-clip: text;
@@ -127,16 +126,21 @@ select:-webkit-autofill {
 
 .header-page {
   @include main-header;
+  margin-bottom: 40px;
   font-size: 68px;
+  line-height: 85px;
 }
 
 .header-section {
   @include main-header;
+  margin-bottom: 30px;
   font-size: 36px;
   font-weight: 900;
+  line-height: 45px;
 }
 
 .header-block {
+  margin-bottom: 16px;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
