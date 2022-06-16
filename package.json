@@ -24,7 +24,7 @@
     "formik": "^2.2.9",
     "framer-motion": "^6.2.7",
     "hamburger-react": "^2.4.1",
-    "hero_league_api": "https://github.com/xFixx/front_hleague#hero_league_api",
+    "hero_league_api": "git+https://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:x-oauth-basic@github.com/xFixx/front_hleague#hero_league_api",
     "material-icons": "^1.10.7",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
