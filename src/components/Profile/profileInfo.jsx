@@ -1,14 +1,13 @@
 import React from 'react'
 import cl from '../../page/profile/profile.module.scss'
 import { useMediaQuery } from '@mui/material'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 const ProfileInfo = ({ setEditStatus, editStatus }) => {
   const isTabletMin = useMediaQuery('(min-width:768px)')
   const isTabletMax = useMediaQuery('(max-width:1200px)')
   const isMobileMax = useMediaQuery('(max-width: 700px)')
 
-  const dispatch = useDispatch()
   const { user } = useSelector((state) => state.user)
 
   console.log(user.role)

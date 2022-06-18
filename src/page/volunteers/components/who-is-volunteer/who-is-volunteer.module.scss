@@ -1,0 +1,13 @@
+.b {
+  &__img {
+    margin-top: 100px;
+
+    @media screen and (max-width: 959px) {
+      margin-top: 50px;
+    }
+  }
+
+  &__link {
+    margin-top:  50px;
+  }
+}

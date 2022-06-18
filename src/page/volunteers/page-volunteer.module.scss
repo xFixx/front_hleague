@@ -1,11 +1,9 @@
 .pageVolunteers {
-  &__gratitude {
-    font-size: 60px;
-    line-height: 70px;
+  &__section {
+    margin-bottom: 50px;
   }
 
-  &__gratitudeDesc {
-    font-size: 18px;
-    color: var(--color-text-faded);
+  &__avatar {
+    margin-bottom: 13px;
   }
 }

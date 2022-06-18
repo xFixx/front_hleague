@@ -1,0 +1,7 @@
+.b {
+  &__avatar {
+    @media screen and (max-width: 959px) {
+      margin-bottom: 30px;
+    }
+  }
+}

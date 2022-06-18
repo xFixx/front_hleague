@@ -1,0 +1,24 @@
+.b {
+  &__title {
+    font-size: 60px;
+    line-height: 70px;
+
+    @media screen and (max-width: 959px) {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  &__desc {
+    font-size: 18px;
+    color: var(--color-text-faded);
+  }
+
+  &__img {
+    margin-top: 100px;
+
+    @media screen and (max-width: 959px) {
+      margin-top: 50px;
+    }
+  }
+}
