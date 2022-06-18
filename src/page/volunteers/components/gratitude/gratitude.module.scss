@@ -1,0 +1,15 @@
+.b {
+  &__title {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  &__desc {
+    font-size: 18px;
+    color: var(--color-text-faded);
+  }
+
+  &__img {
+    margin-top: 100px;
+  }
+}

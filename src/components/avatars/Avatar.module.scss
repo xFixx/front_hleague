@@ -15,6 +15,7 @@ $padding-side: 8px;
   }
 
   &__title {
+    display: inline-flex;
     padding-left: $padding-side;
     padding-right: $padding-side;
     font-size: 15px;
