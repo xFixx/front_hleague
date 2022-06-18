@@ -10,6 +10,7 @@ export const ImportantThings = ({ className }) => {
 
       <div className="row">
         <div className="col-sm-6">
+          <h2 className="header-block">Твои права</h2>
           <ul>
             <li>Взаимодействовать с командой на равных;</li>
             <li>Получить назначение на оговоренную функцию;</li>
@@ -20,6 +21,7 @@ export const ImportantThings = ({ className }) => {
           </ul>
         </div>
         <div className="col-sm-6">
+          <h2 className="header-block">Ты ответственен ЗА:</h2>
           <ul>
             <li>Свой внешний вид;</li>
             <li>Эффективное использование времени и ресурсов;</li>

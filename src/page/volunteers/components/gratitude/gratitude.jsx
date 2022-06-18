@@ -15,7 +15,7 @@ export const Gratitude = ({ className }) => {
       </div>
 
       <div className="row">
-        <div className="col-sm-6">
+        <div className="col-sm-12 col-lg-6">
           <p className={cls.b__desc}>
             Мы очень ценим твою помощь и готовы ответить тем же!<br />
             Пусть этот день будет в радость и оставит только хорошие воспоминания!

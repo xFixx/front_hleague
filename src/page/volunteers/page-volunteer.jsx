@@ -47,8 +47,9 @@ export const PageVolunteers = () => {
 
           <div className="row">
             {VOLUNTEERS_HIEARCHY.map(position => (
-              <div className="col-sm-2">
+              <div className="col-sm-3 col-lg-2">
                 <AvatarVolunteer
+                  className={cls.pageVolunteers__avatar}
                   title={position.name}
                   imgUrl={position.img}
                 />

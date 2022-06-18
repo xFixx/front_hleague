@@ -2,6 +2,11 @@
   &__title {
     font-size: 60px;
     line-height: 70px;
+
+    @media screen and (max-width: 959px) {
+      font-size: 32px;
+      line-height: 39px;
+    }
   }
 
   &__desc {
@@ -11,5 +16,9 @@
 
   &__img {
     margin-top: 100px;
+
+    @media screen and (max-width: 959px) {
+      margin-top: 50px;
+    }
   }
 }

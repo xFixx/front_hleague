@@ -8,7 +8,7 @@ export const VolunteerFunctions = ({ className }) => {
         <h2 className="header-section">Функции волонтеров</h2>
       </div>
       <div className="row">
-          <div className="col-lg-4">
+          <div className="col-sm-6 col-lg-4">
             <div className="enum">
               <div className="enum__number">01</div>
               <h3 className="enum__title header-block">регистрация</h3>
@@ -21,7 +21,7 @@ export const VolunteerFunctions = ({ className }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-sm-6 col-lg-4">
             <div className="enum">
               <div className="enum__number">02</div>
               <h3 className="enum__title header-block">Камера хранения</h3>
@@ -32,7 +32,7 @@ export const VolunteerFunctions = ({ className }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-sm-6 col-lg-4">
             <div className="enum">
               <div className="enum__number">03</div>
               <h3 className="enum__title header-block">Полевая кухня</h3>
@@ -42,7 +42,7 @@ export const VolunteerFunctions = ({ className }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-sm-6 col-lg-4">
             <div className="enum">
               <div className="enum__number">04</div>
               <h3 className="enum__title header-block">Старт</h3>
@@ -52,7 +52,7 @@ export const VolunteerFunctions = ({ className }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-sm-6 col-lg-4">
             <div className="enum">
               <div className="enum__number">05</div>
               <h3 className="enum__title header-block">Финиш</h3>
@@ -64,7 +64,7 @@ export const VolunteerFunctions = ({ className }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-sm-6 col-lg-4">
             <div className="enum">
               <div className="enum__number">06</div>
               <h3 className="enum__title header-block">Пит-стопы</h3>
@@ -74,7 +74,7 @@ export const VolunteerFunctions = ({ className }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-sm-6 col-lg-4">
             <div className="enum">
               <div className="enum__number">07</div>
               <h3 className="enum__title header-block">Сопровождение трассы</h3>
@@ -84,7 +84,7 @@ export const VolunteerFunctions = ({ className }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-sm-6 col-lg-4">
             <div className="enum">
               <div className="enum__number">08</div>
               <h3 className="enum__title header-block">Медицина</h3>
@@ -95,7 +95,7 @@ export const VolunteerFunctions = ({ className }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-sm-6 col-lg-4">
             <div className="enum">
               <div className="enum__number">09</div>
               <h3 className="enum__title header-block">Фан - Зона</h3>

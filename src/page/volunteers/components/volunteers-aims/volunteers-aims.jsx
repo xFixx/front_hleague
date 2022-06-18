@@ -15,7 +15,7 @@ export const VolunteerAims = ({ className }) => {
       </div>
 
       <div className="row">
-        <div className="col-sm-6">
+        <div className="col-sm-12 col-lg-6">
           <ul>
             <li>Цели Волонтерского Центра лига  Героев:</li>
             <li>Проведение предварительной подготовки и обучения волонтеров перед мероприятиями</li>
@@ -23,7 +23,7 @@ export const VolunteerAims = ({ className }) => {
             <li>Ознакомление волонтеров с миссиями и целями проектов Лиги Героев</li>
           </ul>
         </div>
-        <div className="col-sm-6">
+        <div className="col-sm-12 col-lg-6">
           <ul>
             <li>Повышение уровня лояльности и преданности волонтеров к проектам Лиги Героев</li>
             <li>Обеспечение доступных условий для личностного роста волонтеров Центра</li>
