@@ -15,7 +15,7 @@ export const CenterStructure = ({ className }) => {
 
       <div className="row">
         {FOUNDERS_LIST.map(founder => (
-          <div className='col-sm-4 col-lg'>
+          <div className='col-6 col-sm-4 col-lg'>
             <AvatarFounder
               className={cls.b__avatar}
               img={founder.img}

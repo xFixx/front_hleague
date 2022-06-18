@@ -3,9 +3,14 @@
     font-size: 60px;
     line-height: 70px;
 
-    @media screen and (max-width: 959px) {
+    @media screen and (max-width: 991px) {
       font-size: 32px;
       line-height: 39px;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 20px!important;
+      line-height: 28px !important;
     }
   }
 
@@ -17,7 +22,7 @@
   &__img {
     margin-top: 100px;
 
-    @media screen and (max-width: 959px) {
+    @media screen and (max-width: 991px) {
       margin-top: 50px;
     }
   }
