@@ -1,3 +1,5 @@
+import cn from 'classnames';
+
 import MainLayout from "../../components/MainLayout/MainLayout";
 
 import imgIntro from '../../assets/instructors-privileges-intro.jpg';
@@ -20,7 +22,7 @@ export const PageInstructorPrivileges = () => {
           <div className="row">
             <div className="col">
               <h3 className="header-block">привилегии для инструкторов</h3>
-              <table className='table table-dark table-striped'>
+              <table className={cn(cls.b__table, 'table table-dark table-striped')}>
                 <thead className="thead-light">
                   <tr>
                     <th>Привилегии</th>
