@@ -9,7 +9,7 @@ export const Intro = ({ className }) => {
   return (
     <section className={cn(className, 'container')}>
       <div className="row">
-        <h1 className="header-page">механика набора взводов и оплата дли инструкторов</h1>
+        <h1 className="header-page">механика набора взводов и оплата для инструкторов</h1>
       </div>
 
       <div className="row">
