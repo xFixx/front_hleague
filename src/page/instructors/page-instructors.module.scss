@@ -7,6 +7,10 @@
   &__projectHistory,
   &__qualityControlSystem {
     margin-bottom: 150px;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__carierRoadMap {

@@ -1,3 +1,9 @@
 .b {
-  
+  &__list {
+    &:not(:last-child) {
+      @media screen and (max-width: 575px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
 }

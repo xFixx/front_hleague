@@ -1,9 +1,24 @@
 .b {
   &__list {
     margin-bottom: 60px;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 0;
+    }
   }
 
   &__img {
     margin-bottom: 40px;
+
+    @media screen and (max-width: 991px) {
+      margin-top: 40px !important;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__avatar {
+    @media screen and (max-width: 991px) {
+      margin-bottom: 15px;
+    }
   }
 }

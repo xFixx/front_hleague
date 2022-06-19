@@ -1,5 +1,25 @@
 .b {
   &__imgIntro {
     margin-bottom: 150px;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__table {
+    @media screen and (max-width: 991px) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 5px;
+      line-height: 5px;
+    }
   }
 }

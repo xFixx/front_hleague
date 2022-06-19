@@ -9,11 +9,11 @@ import {
   InstructorTasks,
   QualityControlSystem,
   CodeOfHonor,
+  MainDocuments,
 } from './components';
 
 
 import imgSeeYou from 'assets/see-you.jpg';
-import iconCross from 'assets/icon-cross.svg';
 
 import cls from './page-instructors.module.scss';
 
@@ -39,20 +39,7 @@ export const PageInstructors = () => {
 
         <QualityControlSystem className={cls.page__qualityControlSystem}/>
 
-        <section className={cn(cls.page__mainDocuments, 'container')}>
-          <div className="row">
-            <h2 className="header-section">ГЛАВНЫЕ ДОКУМЕНТЫ ИНСТРУКТОРА/СУДЬИ</h2>
-          </div>
-
-          <div className="row">
-            <div className="col">
-              <div className="card">
-                <img className='card__icon' src={iconCross} alt="" />
-                <p>Все травмы необходимо регистрировать у медиков только в день гонки, чтобы участники в случае необходимости получили выплаты. Если травма зарегистрирована на следующий день или позднее, то это не является страховым случаем !</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <MainDocuments className={cls.page__mainDocuments} />
 
         <section className={cn(cls.page__formsOfInteraction, 'container')}>
           <div className="row">
