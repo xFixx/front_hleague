@@ -33,7 +33,7 @@ export const InstructorTasks = ({ className }) => {
           </div>
       </div>
       <div className="row">
-        <div className="col-sm-3">
+        <div className="col-sm-6 col-lg-3">
           <h3 className="header-block">Задачи Инструктора</h3>
           <ul>
             <li>Инструктаж участников перед стартом</li>
@@ -44,7 +44,7 @@ export const InstructorTasks = ({ className }) => {
             <li>Оказание первой доврачебной помощи</li>
           </ul>
         </div>
-        <div className="col-sm-3">
+        <div className="col-sm-6 col-lg-3">
           <h3 className="header-block">Задачи судьи</h3>
           <ul>
             <li>Знать и объявлять правила прохождения препятствий и положения Регламента участникам</li>
@@ -54,7 +54,7 @@ export const InstructorTasks = ({ className }) => {
             <li>Обеспечение безопасного прохождения участниками препятствия</li>
           </ul>
         </div>
-        <div className="col-sm-3">
+        <div className="col-sm-6 col-lg-3">
           <h3 className="header-block">Качества Инструктора</h3>
           <ul>
             <li>Организованность</li>
@@ -69,7 +69,7 @@ export const InstructorTasks = ({ className }) => {
             <li>Стремление к совершенству</li>
           </ul>
         </div>
-        <div className="col-sm-3">
+        <div className="col-sm-6 col-lg-3">
           <h3 className="header-block">Качества судьи</h3>
           <ul>
             <li>Организованность</li>

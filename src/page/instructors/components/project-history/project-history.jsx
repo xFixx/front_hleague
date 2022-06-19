@@ -15,7 +15,7 @@ export const ProjectHistory = ({ className }) => {
       <div className="row">
         <h2 className="header-section">ИСТОРИЯ ПРОЕКТА</h2>
 
-        <div className={cn(cls.b__list, 'col-sm-6')}>
+        <div className={cn(cls.b__list, 'col-sm-12 col-lg-6')}>
           <ul>
             <li>Первая «Гонка Героев» длиной в 5 км прошла 14 сентября 2013 года на полигоне Алабино, в ней участвовало всего 300 человек.</li>
             <li>В 2022 году проекту исполнилось 9 лет.</li>
@@ -34,8 +34,9 @@ export const ProjectHistory = ({ className }) => {
 
         <div className="row">
           {MAIN_INFLUENCERS.map(person => (
-            <div className="col">
+            <div className="col-6 col-sm-3 col-lg ">
               <AvatarFounder
+                className={cls.b__avatar}
                 name={person.name}
                 position={person.position}
                 img={person.img}

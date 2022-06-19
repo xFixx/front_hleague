@@ -10,36 +10,46 @@ import cls from './quality-control-system.module.scss';
 export const QualityControlSystem = ({ className }) => {
   return (
     <section className={cn(className, 'container')}>
-      <div className="row">
-        <h2 className="header-section">СИСТЕМА КОНТРОЛЯ КАЧЕСТВА РАБОТЫ ИНСТРУКТОРОВ</h2>
+      <div className='row'>
+        <h2 className='header-section'>СИСТЕМА КОНТРОЛЯ КАЧЕСТВА РАБОТЫ ИНСТРУКТОРОВ</h2>
       </div>
 
-      <div className="row">
-        <div className={cn(cls.b__infoCard, 'col-md-4')}>
-          <div className="card">
-            <img className='card__icon' src={iconEnvelop} alt="" />
+      <div className='container'>
+        <div className={cn(cls.b__lines, 'row')}>
+          <div className={cn(cls.b__line, cls.b__lineTop, 'col-12')}></div>
+          <div className={cn(cls.b__line, cls.b__lineBottomLeft, 'col-md-4')}></div>
+          <div className={cn(cls.b__line, cls.b__lineBottomMiddle, 'col-md-4')}></div>
+          <div className={cn(cls.b__line, cls.b__lineBottomRight, 'col-md-4')}></div>
+        </div>
+      </div>
+
+      <div className={cn(cls.b__cards, 'row')}>
+        <div className={cn('')} />
+        <div className={cn(cls.b__infoCard, 'col-10 col-sm-8 col-md-4')}>
+          <div className='card'>
+            <img className='card__icon' src={iconEnvelop} alt='' />
             <p>Получение обратной связи от участников во взводе (отзывы, в том числе, в соцсетях)</p>
             <p>Осуществляется всем орг. составом</p>
           </div>
         </div>
-        <div className={cn(cls.b__infoCard, 'col-md-4')}>
-          <div className="card">
-            <img className='card__icon' src={iconGroup} alt="" />
+        <div className={cn(cls.b__infoCard, 'col-10 col-sm-8 col-md-4')}>
+          <div className='card'>
+            <img className='card__icon' src={iconGroup} alt='' />
             <p>Проверка работы инструкторов непосредственно на трассе/Препятствиях</p>
             <p>Осуществляется эксперт-инструктором, старшими участков, командиром инструкторов</p>
           </div>
         </div>
-        <div className={cn(cls.b__infoCard, 'col-md-4')}>
-          <div className="card">
-            <img className='card__icon' src={iconVector} alt="" />
+        <div className={cn(cls.b__infoCard, 'col-10 col-sm-8 col-md-4')}>
+          <div className='card'>
+            <img className='card__icon' src={iconVector} alt='' />
             <p>Проверка обеспечения норм безопасности (отсутствие травм во взводе)</p>
             <p>Осуществляется эксперт-инструктором, старшими участков, командиром инструкторов</p>
           </div>
         </div>
       </div>
 
-      <div className="row">
-        <div className="col">
+      <div className='row'>
+        <div className='col'>
           <div className={cn(cls.b__warning, 'card')}>
             <p><b>ВАЖНО!</b></p>
             <p><b>Применяется система выговоров и штрафов за нарушение правил работы на трассе.</b></p>
@@ -49,8 +59,8 @@ export const QualityControlSystem = ({ className }) => {
         </div>
       </div>
 
-      <div className="row">
-        <div className="col">
+      <div className='row'>
+        <div className='col'>
           <table className='table table-dark table-striped'>
             <thead>
               <tr>
