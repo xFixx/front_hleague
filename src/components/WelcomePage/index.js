@@ -12,7 +12,7 @@ function WelcomePage() {
       <div className={cls.SubText}>
         <p>Ваш email подтвержден</p>
         {/* <p>
-          Проверь <a href={DOMAIN}>свою почту</a>, на нее мы выслали твой пароль
+          Проверь свою почту</a>, на нее мы выслали твой пароль
           от личного кабинета.
         </p> */}
       </div>
@@ -20,7 +20,7 @@ function WelcomePage() {
         <SecondaryButton>Войдите в личный кабинет</SecondaryButton>
       </Link>
       {/* <p className={cls.MailCheck}>
-        Перед входом проверьте <a href={DOMAIN}> почту!</a>
+        Перед входом проверьте почту!</a>
       </p> */}
     </div>
   )

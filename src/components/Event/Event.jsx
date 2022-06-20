@@ -92,6 +92,9 @@ const eventCard = [
   },
 ]
 
+let ev_link = "https://heroleague.ru/calendar";
+let pic_url = "https://heroleague.ru";
+
 const monthName = [
   'Январь',
   'Февраль',
@@ -128,7 +131,7 @@ const Event = () => {
     let current = []
 
     !!events &&
-      events.map(({ title, event_city, title_above, external_url }) => {
+      events.map(({ title, event_city, title_above, external_url, event_type }) => {
         event_city.forEach((item) => {
           if (item.start_time >= currentDate)
             current.push({
@@ -138,6 +141,7 @@ const Event = () => {
               address: item.address,
               external_url,
               id: item.id,
+              logo: pic_url + event_type.logo,
             })
         })
       })
@@ -148,7 +152,7 @@ const Event = () => {
   useEffect(async () => {
     getEvents().then((res) => {
       setEvents(res.values)
-      // console.log(res.values)
+        // console.log(res.values)
     })
   }, [])
 
@@ -166,26 +170,26 @@ const Event = () => {
               description,
               address,
               external_url,
-              banners,
+              banner,
+              logo,
             }) => {
               return (
                 <div
                   key={id}
                   className={cls.eventItem}
                   style={{
-                    background: `url(${banners?.home_page?.desktop_picture})`,
+                    background: `url(${banner?.home_page?.desktop_picture})`,
                     backgroundSize: `cover`,
                   }}
                 >
-                  <img className={cls.name} alt="name" src={eventCard[0].h1} />
+                  <img className={cls.name} alt="name" src={`${logo}`} />
                   <h2 className={cls.date}>{getEventDate(data)}</h2>
                   <p className={cls.desc}>{description}</p>
                   <p className={cls.city}>{address}</p>
                   <a
-                    href={`${external_url}`}
+                    href={`${ev_link}`}
                     target={'_blank'}
                   >
-                    {console.log(external_url)}
                     <button className={cls.participate}>Принять участие</button>
                   </a>
                 </div>
