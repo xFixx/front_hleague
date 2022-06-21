@@ -1,0 +1,22 @@
+.b {
+  &__img {
+    margin-top: 100px;
+
+    @media screen and (max-width: 959px) {
+      margin-top: 50px;
+    }
+  }
+
+  &__post {
+    &:not(:last-child) {
+
+      @media screen and (max-width: 959px) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &__link {
+    margin-top:  35px;
+  }
+}

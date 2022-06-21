@@ -1,0 +1,25 @@
+.b {
+  &__paragraph {
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__participationList {
+    margin-bottom: 120px;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+  }
+}

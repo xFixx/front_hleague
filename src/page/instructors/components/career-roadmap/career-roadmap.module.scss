@@ -14,6 +14,11 @@
   &__point {
     padding: 21px 13px;
     text-transform: uppercase;
+
+    @media screen and (max-width: 575px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   &__step {
@@ -22,6 +27,19 @@
     width: 100%;
     min-height: 100px;
     padding: 7px 25px;
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+ 
+    @media screen and (max-width: 991px) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 20px 10px 20px 35px;
+      min-height: auto;
+      text-align: left;
+    }
   }
 
   &__num {
@@ -31,6 +49,11 @@
     font-size: 31px;
     font-weight: 900;
     line-height: 37px;
+
+    @media screen and (max-width: 575px) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__arrow {
@@ -41,6 +64,10 @@
     background-image: url('../../../../assets/icon-arrow.svg');
     background-size: contain;
     background-position: center;
+
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
   }
 
   &__arrowDown {
@@ -54,13 +81,38 @@
 
   &__start {
     padding-top: 40px;
+
+    @media screen and (max-width: 1199px) {
+      padding-top: 0;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__even {
     padding-top: 120px;
+
+    @media screen and (max-width: 1199px) {
+      padding-top: 0;
+    }
   }
 
   &__end {
     padding-top: 120px;
+
+    @media screen and (max-width: 1199px) {
+      padding-top: 0;
+    }
+  }
+
+  &__dividerRight,
+  &__dividerLeft {
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
   }
 }

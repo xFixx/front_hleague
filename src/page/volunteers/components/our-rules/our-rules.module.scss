@@ -1,0 +1,18 @@
+.b {
+  &__enumList {
+    margin-bottom: 80px;
+
+    @media screen and (max-width: 959px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__enumTitleHeight {
+    height: auto;
+    min-height: 70px;
+
+    @media screen and (max-width: 575px) {
+      min-height: auto;
+    }
+  }
+}

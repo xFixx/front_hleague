@@ -9,12 +9,23 @@ $padding-side: 8px;
   background-color: var(--color-bg-gray);
   overflow: hidden;
 
+  @media screen and (max-width: 959px) {
+    min-height: 210px;
+    padding-top: 10px;
+  }
+
+  @media screen and (max-width: 575px) {
+    min-height: 225px;
+    padding-top: 10px;
+  }
+
   &__img {
     width: 100%;
     margin-bottom: 20px;
   }
 
   &__title {
+    display: inline-flex;
     padding-left: $padding-side;
     padding-right: $padding-side;
     font-size: 15px;

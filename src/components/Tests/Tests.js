@@ -182,28 +182,3 @@ const Tests = () => {
 }
 
 export default Tests
-
-const tests = [
-  {
-    id: 'test_1',
-    type: 'radio',
-    label: 'Кто такой волонтер?',
-    helpText: ' (выберите 1 вариант ответа)',
-    img: first,
-    count: '01',
-    answers: [
-      {
-        id: 'test_1_question_1',
-        answer: 'Движущая сила любого мероприятия, часть одной большой команды',
-      },
-      {
-        id: 'test_1_question_2',
-        answer: 'Движущая сила только одного мероприятия за весь сезон',
-      },
-      {
-        id: 'test_1_question_3',
-        answer: 'Отдельная движущая сила мероприятия, не часть команды',
-      },
-    ],
-  },
-]
