@@ -8,6 +8,7 @@ export * from './instructors';
 export * from './main';
 export * from './mechanics-and-payments';
 export * from './profile';
+export * from './regulations';
 export * from './study';
 export * from './training';
 export * from './volunteers';

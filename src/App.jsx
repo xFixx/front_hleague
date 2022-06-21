@@ -18,6 +18,7 @@ import {
   PageInstructors,
   PageMechanicsAndPayments,
   PageAssignmentAndStandarts,
+  PageRegulations,
 } from 'page';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -61,6 +62,7 @@ function App() {
           <RouteGuard path="/instructors" component={PageInstructors} exact />
           <RouteGuard path="/selection-and-payments" component={PageMechanicsAndPayments} exact />
           <RouteGuard path="/assignment-and-standarts" component={PageAssignmentAndStandarts} exact />
+          <RouteGuard path="/regulations" component={PageRegulations} exact />
         </Switch>
       </Router>
     </StylesProvider>
