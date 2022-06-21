@@ -1,3 +1,16 @@
 .b {
   font-size: 16px;
+
+  &__section {
+    margin-bottom: 85px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+
+  &__tableApplication {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
 }
