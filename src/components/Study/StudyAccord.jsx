@@ -33,7 +33,6 @@ const StudyAccord = () => {
 
   useEffect(() => {
     getCategories().then((res) => {
-      debugger;
       setCategories(res);
     });
   }, [])
