@@ -111,15 +111,17 @@ const Tests = () => {
                             alt="img"
                             className={cls.Img}
                           />
-                        ) : (
-                          <Loader size={'35px'} />
-                        )}
+                        ) 
+                        : (
+                          <Loader size={'0px'} />
+                        )
+                        }
                         <div className={cls.testQues}>
                           <div>
                             <h2 className={cls.count}>{++index}</h2>
                             <div className={cls.line} />
                             <p className={cls.question}>
-                              {title + '⠀'}
+                              {title} 
                               <span className={cls.attention}>
                                 {question_type === 'R'
                                   ? ' (выберите 1 вариант ответа)'
