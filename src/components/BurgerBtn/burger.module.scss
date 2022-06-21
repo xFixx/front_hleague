@@ -72,9 +72,11 @@
         .userOffline{
           padding-left: 23px;
           width: 170px;
+          margin-bottom: 0;
         }
 
         .navIcon {
+          display: flex;
           width: 17px;
           height: 17px;
           margin-left: 24px;

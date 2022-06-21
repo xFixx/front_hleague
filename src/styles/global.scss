@@ -11,11 +11,15 @@
   --bs-body-color: #fff;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
   padding: 0;
 
-  background: var(--color-dark);
+  background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family-main);
   font-size: 14px;
@@ -223,6 +227,7 @@ select:-webkit-autofill {
   }
 }
 
+
 .table {
   th {
     background-color: #2D2D2E;
@@ -247,6 +252,12 @@ select:-webkit-autofill {
 
   tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.3);;
+  }
+
+  @media screen and (max-width: 575px) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
 

@@ -2,6 +2,8 @@
   border-radius: 50%;
   background: linear-gradient(266.95deg, #982eeb -20.2%, #359ad2);
   animation: loader 1s ease infinite;
+  transform: translateY(-7px);
+  margin-right: 15px;
 }
 
 @keyframes loader {

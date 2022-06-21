@@ -28,6 +28,7 @@ const Tests = () => {
 
   useEffect(() => {
     getQuestions(id).then((res) => {
+      debugger;
       setInitialValues(
         res?.questions?.reduce((state, { id }) => {
           return { ...state, [id]: null }
