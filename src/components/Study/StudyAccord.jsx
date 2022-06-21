@@ -24,6 +24,7 @@ const EXAMS_LINKS = {
   2: '/assignment-and-standarts',
   3: '/instructors',
   4: '/volunteers',
+  5: '/regulations',
   8: '/selection-and-payments',
 }
 
@@ -58,23 +59,23 @@ const StudyAccord = () => {
               <div className={cls.bottom}>
                 {EXAMS_ORDER.map((examId) =>
                   exams.find(({ id }) => id === examId)
-                ).map(({ id, title }) => {
+                ).map(exam => {
                   return (
-                    <div className={cls.details} key={id}>
+                    <div className={cls.details} key={exam.id}>
                       <div className={cls.detailImg}>
-                        <img src={getCourseBackgroundImage(id)} alt="" />
-                        <p>{title}</p>
+                        <img src={getCourseBackgroundImage(exam.id)} alt="" />
+                        <p>{exam.title}</p>
                       </div>
                       <div className={cls.detailInfo}>
                         <div className={cls.days}>
-                          <h3>{title}</h3>
+                          <h3>{exam.title}</h3>
                         </div>
                         <div className={cls.detailLine} />
                         <div className={cls.btns}>
-                          <Link to={EXAMS_LINKS[id]}>
+                          <Link to={EXAMS_LINKS[exam.id]}>
                             <button className={cls.btn1}>Пройти курс</button>
                           </Link>
-                          <Link to={`/tests/${id}`}>
+                          <Link to={`/tests/${exam.id}`}>
                             <button className={cls.btn2}>Пройти тест</button>
                           </Link>
                         </div>
