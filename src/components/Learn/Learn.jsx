@@ -53,7 +53,8 @@ const Learn = () => {
           </div>
           <div className={cl.left_inner}>
             <h4>
-              0 <span> ИЗ 5</span>
+              {passNum}
+              <span> ИЗ {exams?.length}</span>
             </h4>
             <h5>Курсов</h5>
             <p>
@@ -78,7 +79,7 @@ const Learn = () => {
           <div className={cl.left_inner}>
             <h4>
               {passNum}
-              <span> ИЗ {exams?.length}</span>
+              <span> ИЗ 2</span>
             </h4>
             <h5>Тестов</h5>
             <p>

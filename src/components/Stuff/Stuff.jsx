@@ -15,6 +15,26 @@ import 'swiper/css'
 import React from 'react'
 import StuffModal from './StuffModal'
 
+function go_to_vacancies () {
+  var ua        = navigator.userAgent.toLowerCase(),
+      isIE      = ua.indexOf('msie') !== -1,
+      version   = parseInt(ua.substr(4, 2), 10),
+      url       = "https://career.heroleague.ru/";
+
+  // Internet Explorer 8 and lower
+  if (isIE && version < 9) {
+      var link = document.createElement('a');
+      link.href = url;
+      document.body.appendChild(link);
+      link.click();
+  }
+
+  else { 
+      window.location.href = url; 
+  }
+}
+
+
 const stuffs = [
   {
     id: 'stuff-1',
@@ -142,7 +162,7 @@ export default function Stuff() {
                           ))}
                         </ul>
                         <button
-                          onClick={() => handleChange(idName)}
+                          onClick={go_to_vacancies}
                           className={styles.moreBtn}
                         >
                           Подробнее
@@ -192,7 +212,7 @@ export default function Stuff() {
                       ))}
                     </ul>
                     <button
-                      onClick={(e) => handleChange(idName)}
+                      onClick={go_to_vacancies}
                       className={styles.moreBtn}
                     >
                       Подробнее

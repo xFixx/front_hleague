@@ -33,7 +33,6 @@ const StudyAccord = () => {
 
   useEffect(() => {
     getCategories().then((res) => {
-      debugger;
       setCategories(res);
     });
   }, [])
@@ -52,7 +51,7 @@ const StudyAccord = () => {
               <Typography className={cls.top} component={'div'}>
                 <h2>{title}</h2>
                 <div className={cls.line} />
-                <p>Обучающие материалы</p>
+                <p></p>
               </Typography>
             </AccordionSummary>
             <AccordionDetails className={cls.accordDetail}>
