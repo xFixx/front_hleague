@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { NotificationManager } from 'react-notifications';
 import cls from './test.module.scss'
 import { Formik } from 'formik'
 import Radio from '@mui/material/Radio'
@@ -125,8 +126,8 @@ const Tests = () => {
 
             try {
               const response = await $api.post('/exams/user-exams/', mapAnswers(data, values));
-              const {passed, statistic} = response.data;
 
+              const {passed, statistic} = response.data;
               setCorrect(statistic.correct);
               setTotalQuestions(statistic.total_questions);
 
@@ -134,6 +135,11 @@ const Tests = () => {
               if (!passed) setIsOpenFailModal(true);
 
             } catch (err) {
+              const {response: { data }} = err;
+
+              data.non_field_errors.forEach((message) => {
+                NotificationManager.error(message);
+              });
               console.log(err);
             }
           }}

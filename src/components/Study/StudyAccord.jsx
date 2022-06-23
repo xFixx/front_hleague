@@ -117,7 +117,7 @@ const StudyAccord = () => {
 
                                 if (isPassed) {
                                   setIsWarningOpen(true);
-                                } else if (count > 4) {
+                                } else if (count >= 3) {
                                   NotificationManager.error(
                                     'Превышено количество попыток',
                                   );
