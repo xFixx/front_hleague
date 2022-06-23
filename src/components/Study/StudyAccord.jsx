@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import {NotificationManager} from 'react-notifications';
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import cls from './study.module.scss'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { $api } from '../../services/api'
 import { getCourseBackgroundImage } from '../../helpers'
 import { EXAMS_ORDER } from '../../constants'
+import { Modal } from 'components/Modal'
 
 const getCategories = async () => {
   try {
@@ -16,6 +18,15 @@ const getCategories = async () => {
     return data
   } catch (e) {
     console.log(e)
+  }
+}
+
+const getUserExams = async () => {
+  try {
+    const {data} = await $api.get('/exams/user-exams/');
+    return data;
+  } catch (e) {
+    console.log(e);
   }
 }
 
@@ -29,19 +40,41 @@ const EXAMS_LINKS = {
 }
 
 const StudyAccord = () => {
+  const history = useHistory();
   const [categories, setCategories] = useState([])
+  const [examsPassed, setExamsPassed] = useState([]);
+  const [isWaringOpen, setIsWarningOpen] = useState(false);
 
   useEffect(() => {
     getCategories().then((res) => {
       setCategories(res);
     });
-  }, [])
+    getUserExams().then(res => {
+      setExamsPassed(res);
+    });
+  }, []);
 
   return (
     <div className={cls.StudyAccord}>
       {categories.map(({ title, exams }) => {
         return (
+          <>
+            <Modal
+              isOpen={isWaringOpen}
+              onRequestClose={() => { setIsWarningOpen(false); }}
+            >
+              <h2 className="header-section">Вы успешно завершили данное тестирование!</h2>
+              <Link>
+                <button
+                  className={cls.btnOk}
+                  onClick={() => { setIsWarningOpen(false); }}
+                >
+                  OK
+                </button>
+              </Link>
+            </Modal>
           <Accordion className={cls.accordion}>
+
             <AccordionSummary
               expandIcon={<ExpandMoreIcon className={cls.icon} />}
               aria-controls="panel1a-content"
@@ -74,9 +107,27 @@ const StudyAccord = () => {
                           <Link to={EXAMS_LINKS[exam.id]}>
                             <button className={cls.btn1}>Пройти курс</button>
                           </Link>
-                          <Link to={`/tests/${exam.id}`}>
-                            <button className={cls.btn2}>Пройти тест</button>
-                          </Link>
+                            <button
+                              className={cls.btn2}
+                              onClick={() => {
+                                debugger;
+
+                                const isPassed = examsPassed.find(e => e.exam === exam.id && e.passed);
+                                const count = examsPassed.filter(e => e.exam === exam.id).length || 0;
+
+                                if (isPassed) {
+                                  setIsWarningOpen(true);
+                                } else if (count > 4) {
+                                  NotificationManager.error(
+                                    'Превышено количество попыток',
+                                  );
+                                } else {
+                                  history.push(`/tests/${exam.id}?tries=${count}`);
+                                }
+                              }}
+                            >
+                              Пройти тест
+                            </button>
                         </div>
                       </div>
                     </div>
@@ -85,6 +136,7 @@ const StudyAccord = () => {
               </div>
             </AccordionDetails>
           </Accordion>
+        </>
         )
       })}
     </div>

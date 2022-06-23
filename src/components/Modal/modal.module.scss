@@ -1,0 +1,33 @@
+.b {
+  position: relative;
+
+  &__close {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 10px;
+    border: none;
+    padding: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height:2px;
+      background-color: white;
+      transform-origin: 50% 50%;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      transform-origin: 50% 50%;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+  }
+}

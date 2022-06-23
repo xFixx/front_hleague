@@ -1,11 +1,11 @@
-import React from 'react'
-import MainLayout from '../../components/MainLayout/MainLayout'
-import Complete from '../../components/Complete/index'
+import React from 'react';
+import { LayoutPublic } from 'layouts';
+import Complete from '../../components/Complete/index';
 
 export const CompletePage = () => {
   return (
-    <MainLayout>
+    <LayoutPublic>
       <Complete />
-    </MainLayout>
+    </LayoutPublic>
   )
 }
