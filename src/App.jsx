@@ -1,5 +1,7 @@
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
+import { NotificationContainer } from 'react-notifications';
+import Modal from 'react-modal';
 
 import Events from 'page/events/Events';
 import Help from 'page/help/Help';
@@ -21,23 +23,17 @@ import {
   PageRegulations,
 } from 'page';
 
+import 'react-notifications/lib/notifications.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles/global.scss';
 import './App.css';
 
-// const Context = React.createContext()
+Modal.setAppElement('#root');
 
-// const getUser = async(email) =>{
-//   try{
-//     await $api.get('/accounts/auth/users/me/').then(response=>console.log(response))
-//   }catch(e){
-//     console.log(e);
-//   }
-// }
-// getUser()
 function App() {
   return (
     <StylesProvider>
+      <NotificationContainer />
       <Router history={history}>
         <Switch>
           <RouteGuard path="/" component={MainPage} exact />

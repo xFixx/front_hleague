@@ -6,10 +6,13 @@ import RadioGroup from '@mui/material/RadioGroup'
 import { Checkbox } from '@mui/material'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import FormControl from '@mui/material/FormControl'
+
+import {Modal} from '../Modal';
+
 import first from '../../img/1.jpg'
 import * as Yup from 'yup'
 import { $api } from '../../services/api'
-import { useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import Loader from '../Loader/Loader'
 
 const getQuestions = async (id) => {
@@ -21,10 +24,41 @@ const getQuestions = async (id) => {
   }
 }
 
+const mapAnswers = (data, answers) => ({
+  exam: data.id,
+  user_answers: data.questions.map(question => {
+    if (question.question_type === 'R') {
+      return {
+        question: question.id,
+        answer: answers[question.id],
+      };
+    } else {
+      return {
+        question: question.id,
+        check_boxes:  answers[question.id].map(answerId => ({
+          answer: answerId,
+        })),
+      }
+    }
+  })
+})
+
 const Tests = () => {
+  const location = useLocation();
+  const tries = +(new  URLSearchParams(location.search.slice(1))).get('tries') || 0;
+
+  debugger;
+
   const [initialValues, setInitialValues] = useState(null)
   const [data, setData] = useState(null)
-  const { id } = useParams()
+  const { id } = useParams();
+
+  const [isOpenCongratulationsModal, setIsOpenCongratulationsModel] = useState(false);
+  const [isOpenFailModal, setIsOpenFailModal] = useState(false);
+  const [isOpenTryModal, setIsOpenTryModal] = useState(true);
+
+  const [correct, setCorrect] = useState(0);
+  const [totalQuestions, setTotalQuestions] = useState(0);
 
   useEffect(() => {
     getQuestions(id).then((res) => {
@@ -52,16 +86,57 @@ const Tests = () => {
       )
     : null
 
-  console.log({ data, initialValues })
+  console.log({ data, initialValues });
 
   return (
     <div className={cls.Test}>
+      <Modal
+        isOpen={isOpenTryModal}
+        onRequestClose={() => { setIsOpenTryModal(false); }}
+      >
+        <h2 className='header-section'>На прохождение теста у вас есть 3 попытки.</h2>
+        <h3 className='header-block'>Сейчас у вас осталось {3 - tries}</h3>
+      </Modal>
+      <Modal
+        isOpen={isOpenCongratulationsModal}
+        onRequestClose={() => setIsOpenCongratulationsModel(false)}
+      >
+        <h2 className='header-section'>Поздравляем, тест сдан!</h2>
+        <h2 className='header-block'>Вы правильно ответили на {correct} из {totalQuestions}.</h2>
+          
+        <Link to='/training'>
+          <button className={cls.btn1}>OK</button>
+        </Link>
+      </Modal>
+      <Modal
+        isOpen={isOpenFailModal}
+        onRequestClose={() => setIsOpenFailModal(false)}
+      >
+        <h2 className='header-section'>Тест не сдан.</h2>
+        <h2 className='header-block'>Вы правильно ответили на {correct} из {totalQuestions}, что составляет менее 80%.</h2>
+      </Modal>
       <p className={cls.direction}>Главная Тест</p>
       <h2 className={cls.pageName}>ТЕСТ</h2>
       <h1 className={cls.pageDesc}>{data?.title}</h1>
       {initialValues && data && (
         <Formik
-          onSubmit={(values) => console.log(values)}
+          onSubmit={async (values) => {
+            console.log(values);
+
+            try {
+              const response = await $api.post('/exams/user-exams/', mapAnswers(data, values));
+              const {passed, statistic} = response.data;
+
+              setCorrect(statistic.correct);
+              setTotalQuestions(statistic.total_questions);
+
+              if (passed) setIsOpenCongratulationsModel(true);
+              if (!passed) setIsOpenFailModal(true);
+
+            } catch (err) {
+              console.log(err);
+            }
+          }}
           validationSchema={validateSchema}
           initialValues={initialValues}
           style={{ display: 'flex', flexDirection: 'column', gridGap: 100 }}

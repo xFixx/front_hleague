@@ -1,11 +1,11 @@
 import React from 'react'
-import MainLayout from '../../components/MainLayout/MainLayout'
+import { LayoutPublic } from 'layouts'
 import RegistrationPage from '../../components/RegistrationPage'
 
 export const RegisterPage = () => {
   return (
-    <MainLayout>
+    <LayoutPublic>
       <RegistrationPage />
-    </MainLayout>
+    </LayoutPublic>
   )
 }

@@ -20,7 +20,7 @@ body {
   padding: 0;
 
   background-color: var(--color-background);
-  color: var(--color-text);
+  color: var(--color-text) !important;
   font-family: var(--font-family-main);
   font-size: 14px;
   line-height: 20px;

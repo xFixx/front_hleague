@@ -1,11 +1,11 @@
-import React from 'react'
-import MainLayout from '../../components/MainLayout/MainLayout'
-import PasswordResetPage from '../../components/PasswordResetPage'
+import React from 'react';
+import { LayoutPublic } from 'layouts';
+import PasswordResetPage from '../../components/PasswordResetPage';
 
 export const ResetPage = () => {
   return (
-    <MainLayout>
+    <LayoutPublic>
       <PasswordResetPage />
-    </MainLayout>
+    </LayoutPublic>
   );
 };
